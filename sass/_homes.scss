@@ -1,0 +1,6 @@
+@use "../sass/base" as var;
+
+.homes {
+  background-color: var.$color-secondary;
+  grid-column: center-start / center-end;
+}
