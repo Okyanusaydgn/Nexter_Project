@@ -8,7 +8,7 @@
     "devserver": "live-server --browser=chrome",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "prefix:css": "postcss css/style.comp.css -o css/style.prefix.css",
     "compress:css": "sass css/style.prefix.css css/style.css --style=compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
@@ -17,8 +17,9 @@
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "concat": "^1.0.3",
-    "sass": "^1.49.0",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^11.0.1"
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.49.0"
   }
 }
